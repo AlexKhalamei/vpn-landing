@@ -1,0 +1,81 @@
+.faq {
+  padding: 7rem 0;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+  h2 {
+    font-size: 38px;
+    font-weight: 700;
+    text-align: center;
+  }
+  .items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+    gap: 2rem;
+
+    .item {
+      padding: 2rem;
+      box-shadow: 10px 10px 45px 0px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .title {
+        font-size: 18px;
+        font-weight: 600;
+        position: relative;
+
+        &::after {
+          content: '';
+          background: url('@/assets/arrow.svg') center/contain no-repeat;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          right: 0;
+        }
+      }
+      .desc {
+        display: none;
+        font-size: 14px;
+        line-height: 150%;
+      }
+    }
+    .item.active {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .title {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+
+      .desc {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .faq {
+    padding: 4rem 0;
+
+    .wrapper {
+      gap: 3rem;
+    }
+    h2 {
+      font-size: 28px;
+    }
+    .items {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem;
+    }
+  }
+}

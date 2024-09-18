@@ -1,0 +1,103 @@
+@import '@/variables';
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 20px 0;
+  z-index: 99;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .auth {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      width: 120px;
+      padding: 12px;
+      color: $white;
+      border-radius: 20px;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid $white;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #c9c9c977;
+      }
+
+      &:last-child {
+        background-color: $gold;
+        color: $primary;
+        border: 1px solid transparent;
+
+        &:hover {
+          background-color: #ffd467;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .header {
+    .auth {
+      display: none;
+    }
+  }
+  .burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+
+    span,
+    &::before,
+    &::after {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $gold;
+      border-radius: 10px;
+      transition: all 0.3s ease 0s;
+    }
+
+    span {
+      top: 9px;
+    }
+
+    &::after,
+    &::before {
+      content: '';
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+  }
+  .burger.active {
+    &::before {
+      transform: rotate(45deg);
+      top: 9px;
+    }
+    &::after {
+      transform: rotate(-45deg);
+      bottom: 9px;
+    }
+    span {
+      transform: scale(0);
+    }
+  }
+}

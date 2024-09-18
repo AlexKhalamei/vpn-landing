@@ -1,0 +1,18 @@
+.cards {
+  padding: 3rem 1rem;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+  }
+}
+
+@media (max-width: 1199px) {
+  .cards {
+    padding: 2rem 0;
+
+    .wrapper {
+      gap: 5rem;
+    }
+  }
+}

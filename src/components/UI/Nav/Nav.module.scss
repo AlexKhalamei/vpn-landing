@@ -1,0 +1,84 @@
+@import '@/variables';
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.list {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  li {
+    font-weight: 500;
+
+    a {
+      transition-duration: 0.3s;
+      text-underline-offset: 8px;
+      color: $white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.nav.active {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70vw;
+  height: 100%;
+  background: rgb(0 53 121);
+  transition: all 0.3s ease 0s;
+
+  .list {
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
+  .auth {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0;
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      width: 120px;
+      padding: 12px;
+      color: $white;
+      border-radius: 20px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid $white;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #c9c9c977;
+      }
+
+      &:last-child {
+        background-color: $gold;
+        color: $primary;
+        border: 1px solid transparent;
+
+        &:hover {
+          background-color: #ffd467;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .nav {
+    display: none;
+  }
+}
