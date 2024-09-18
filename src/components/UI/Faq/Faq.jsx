@@ -43,7 +43,9 @@ const Faq = () => {
                 key={index}
                 onClick={() => faqIndexHandler(index)}
               >
-                <div className={styles.title}>{item.title}</div>
+                <div className={styles.title}>
+                  <span>{item.title}</span>
+                </div>
                 <div className={styles.desc}>{item.desc}</div>
               </div>
             );
