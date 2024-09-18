@@ -3,10 +3,10 @@ import styles from './Footer.module.scss';
 // imgs
 
 import logo from '@/assets/logo.svg';
-import facebook from '@/assets/facebook.svg';
-import twitter from '@/assets/twitter.svg';
-import instagram from '@/assets/instagram.svg';
-import linkedin from '@/assets/linkedin.svg';
+import facebook from '@/assets/Facebook.svg';
+import twitter from '@/assets/Twitter.svg';
+import instagram from '@/assets/Instagram.svg';
+import linkedin from '@/assets/Linkedin.svg';
 import footerIcon from '@/assets/footer-icon.svg';
 import pc from '@/assets/pc.svg';
 
